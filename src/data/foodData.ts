@@ -8,7 +8,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "botanical",
     "categoryLabel": "Botanical Greens",
     "price": 18.0,
-    "image": "/src/assets/images/becca_foodies_botanical_greens_1784115212572.jpg",
+    "image": "/images/becca_foodies_botanical_greens_1784115212572.jpg",
     "nutrition": {
       "calories": 240,
       "protein": 6,
@@ -36,7 +36,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "botanical",
     "categoryLabel": "Botanical Greens",
     "price": 16.0,
-    "image": "https://picsum.photos/seed/avocado/600/450",
+    "image": "/images/sandwich.png",
     "nutrition": {
       "calories": 380,
       "protein": 9,
@@ -64,7 +64,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "botanical",
     "categoryLabel": "Botanical Greens",
     "price": 15.0,
-    "image": "https://picsum.photos/seed/watermelon/600/450",
+    "image": "/images/seasonal.jpeg",
     "nutrition": {
       "calories": 190,
       "protein": 4,
@@ -92,7 +92,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "coastal",
     "categoryLabel": "Coastal Harvest",
     "price": 36.0,
-    "image": "/src/assets/images/becca_foodies_coastal_harvest_1784115225586.jpg",
+    "image": "/images/becca_foodies_coastal_harvest_1784115225586.jpg",
     "nutrition": {
       "calories": 420,
       "protein": 34,
@@ -120,7 +120,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "coastal",
     "categoryLabel": "Coastal Harvest",
     "price": 29.0,
-    "image": "https://picsum.photos/seed/scallops/600/450",
+    "image": "/images/Smoothie.png",
     "nutrition": {
       "calories": 280,
       "protein": 22,
@@ -148,7 +148,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "earth",
     "categoryLabel": "Earth & Grain",
     "price": 24.0,
-    "image": "/src/assets/images/becca_foodies_earth_grain_1784115235717.jpg",
+    "image": "/images/becca_foodies_earth_grain_1784115235717.jpg",
     "nutrition": {
       "calories": 490,
       "protein": 14,
@@ -176,7 +176,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "earth",
     "categoryLabel": "Earth & Grain",
     "price": 17.0,
-    "image": "https://picsum.photos/seed/beetroot/600/450",
+    "image": "/images/cooking.jpeg",
     "nutrition": {
       "calories": 180,
       "protein": 4,
@@ -204,7 +204,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "earth",
     "categoryLabel": "Earth & Grain",
     "price": 21.0,
-    "image": "https://picsum.photos/seed/cauliflower/600/450",
+    "image": "/images/health.jpeg",
     "nutrition": {
       "calories": 310,
       "protein": 8,
@@ -232,7 +232,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "artisanal",
     "categoryLabel": "Artisanal Desserts",
     "price": 14.0,
-    "image": "https://picsum.photos/seed/pannacotta/600/450",
+    "image": "/images/breakfast.jpeg",
     "nutrition": {
       "calories": 290,
       "protein": 3,
@@ -260,7 +260,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "category": "artisanal",
     "categoryLabel": "Artisanal Desserts",
     "price": 15.0,
-    "image": "https://picsum.photos/seed/souffle/600/450",
+    "image": "/images/pancakes.png",
     "nutrition": {
       "calories": 410,
       "protein": 7,
@@ -1863,7 +1863,7 @@ export const SOURCING_PARTNERS: SourcingPartner[] = [
     location: "Valle Verde Valley",
     partnerName: "Sophia Martinez",
     ingredients: ["Nasturtium flowers", "Wild watercress", "Heirloom micro-tomatoes"],
-    image: "https://picsum.photos/seed/greenhouse/400/300",
+    image: "/images/about_food.png",
     coords: { x: 28, y: 42 },
   },
   {
@@ -1874,7 +1874,7 @@ export const SOURCING_PARTNERS: SourcingPartner[] = [
     location: "Cascade Mountain Range",
     partnerName: "Marcus Thorne",
     ingredients: ["Oak-roasted chanterelles", "Black summer truffle", "Thyme leaves"],
-    image: "https://picsum.photos/seed/forager/400/300",
+    image: "/images/cooking.jpeg",
     coords: { x: 64, y: 25 },
   },
   {
@@ -1885,7 +1885,7 @@ export const SOURCING_PARTNERS: SourcingPartner[] = [
     location: "Swinomish Channel Dock",
     partnerName: "Captain David Wu",
     ingredients: ["Wild sea bass", "Giant sea scallops"],
-    image: "https://picsum.photos/seed/fisherman/400/300",
+    image: "/images/choma.jpeg",
     coords: { x: 45, y: 78 },
   },
   {
@@ -1896,7 +1896,7 @@ export const SOURCING_PARTNERS: SourcingPartner[] = [
     location: "Baker Mill District",
     partnerName: "Rebecca 'Becca' Vance",
     ingredients: ["Ancient sourdough", "Sprouted spelt flour"],
-    image: "https://picsum.photos/seed/bakery/400/300",
+    image: "/images/breakfast.jpeg",
     coords: { x: 82, y: 55 },
   },
 ];
