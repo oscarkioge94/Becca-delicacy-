@@ -9,7 +9,7 @@ export interface MenuItem {
   id: string;
   name: string;
   description: string;
-  category: "botanical" | "coastal" | "earth" | "artisanal";
+  category: string;
   categoryLabel: string;
   price: number;
   image: string;
@@ -21,6 +21,20 @@ export interface MenuItem {
     partner: string;
   };
   signature: boolean;
+  recipeSteps?: string[]; // Optional cooking steps for recipes
+  prepTime?: string;     // Optional prep time
+  cookTime?: string;     // Optional cook time
+  servings?: string;     // Optional servings info
+}
+
+export interface Article {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  image: string;
+  readTime: string;
 }
 
 export interface CartItem {

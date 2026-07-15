@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ShoppingBag, Calendar, Menu, X, Leaf } from "lucide-react";
+import { Heart, Menu, X, Leaf } from "lucide-react";
 
 interface NavbarProps {
-  cartCount: number;
-  onOpenCart: () => void;
-  onOpenReservation: () => void;
+  savedCount: number;
+  onOpenSaved: () => void;
 }
 
-export default function Navbar({ cartCount, onOpenCart, onOpenReservation }: NavbarProps) {
+export default function Navbar({ savedCount, onOpenSaved }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Philosophy", href: "#philosophy" },
-    { name: "Curated Menu", href: "#menu" },
-    { name: "Sourcing Map", href: "#sourcing" },
-    { name: "Catering", href: "#catering" },
+    { name: "About Blog", href: "#philosophy" },
+    { name: "Discover Recipes", href: "#recipes" },
+    { name: "Latest Articles", href: "#articles" },
   ];
 
   const handleLinkClick = (href: string) => {
@@ -60,53 +58,43 @@ export default function Navbar({ cartCount, onOpenCart, onOpenReservation }: Nav
 
           {/* Right Action Items */}
           <div className="hidden md:flex items-center space-x-5">
-            {/* Cart Button */}
+            {/* Saved Recipes Bookmarks Toggle */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={onOpenCart}
-              className="relative p-2.5 rounded-full hover:bg-[#1A1A1A]/5 text-[#1A1A1A] transition-colors cursor-pointer"
-              id="desktop-cart-button"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={onOpenSaved}
+              className="px-6 py-2 border-2 border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#FDFBF7] transition-all duration-200 text-[11px] font-bold tracking-[0.15em] uppercase text-[#1A1A1A] cursor-pointer flex items-center space-x-2"
+              id="desktop-saved-recipes-button"
             >
-              <ShoppingBag className="w-5 h-5" />
+              <Heart className="w-4 h-4 text-[#C4A484] fill-[#C4A484]" />
+              <span>SAVED RECIPES</span>
               <AnimatePresence>
-                {cartCount > 0 && (
+                {savedCount > 0 && (
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0 }}
-                    className="absolute top-1 right-1 bg-[#1A1A1A] text-[#FDFBF7] text-[9px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center"
+                    className="bg-[#1A1A1A] text-[#FDFBF7] text-[9px] font-mono font-bold px-2 py-0.5 rounded-none ml-1"
                   >
-                    {cartCount}
+                    {savedCount}
                   </motion.span>
                 )}
               </AnimatePresence>
-            </motion.button>
-
-            {/* Reservation CTA - Bold Typography Outline Theme */}
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={onOpenReservation}
-              className="px-6 py-2 border-2 border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#FDFBF7] transition-all duration-200 text-[11px] font-bold tracking-[0.15em] uppercase text-[#1A1A1A] cursor-pointer"
-              id="desktop-reserve-button"
-            >
-              RESERVE TABLE
             </motion.button>
           </div>
 
           {/* Mobile Actions / Toggle */}
           <div className="flex items-center space-x-3 md:hidden">
-            {/* Cart Button Mobile */}
+            {/* Saved Recipes Button Mobile */}
             <button
-              onClick={onOpenCart}
+              onClick={onOpenSaved}
               className="relative p-2 rounded-full hover:bg-[#1A1A1A]/5 text-[#1A1A1A]"
-              id="mobile-cart-button"
+              id="mobile-saved-recipes-button"
             >
-              <ShoppingBag className="w-5 h-5" />
-              {cartCount > 0 && (
+              <Heart className="w-5 h-5 text-[#C4A484] fill-[#C4A484]" />
+              {savedCount > 0 && (
                 <span className="absolute top-1 right-1 bg-[#1A1A1A] text-[#FDFBF7] text-[8px] font-mono font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
-                  {cartCount}
+                  {savedCount}
                 </span>
               )}
             </button>
@@ -149,12 +137,13 @@ export default function Navbar({ cartCount, onOpenCart, onOpenReservation }: Nav
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    onOpenReservation();
+                    onOpenSaved();
                   }}
-                  className="w-full text-center py-3 border-2 border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#FDFBF7] transition-all duration-200 text-xs font-bold tracking-[0.2em] uppercase text-[#1A1A1A]"
-                  id="mobile-reserve-button"
+                  className="w-full text-center py-3 border-2 border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#FDFBF7] transition-all duration-200 text-xs font-bold tracking-[0.2em] uppercase text-[#1A1A1A] flex items-center justify-center space-x-2"
+                  id="mobile-saved-action-btn"
                 >
-                  RESERVE TABLE
+                  <Heart className="w-4 h-4 text-[#C4A484] fill-[#C4A484]" />
+                  <span>VIEW SAVED RECIPES ({savedCount})</span>
                 </button>
               </div>
             </div>

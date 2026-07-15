@@ -29,32 +29,32 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-sans text-xs text-[#FDFBF7]/65 leading-relaxed max-w-sm font-light">
-              We operate on solar-powered vertical greenhouses, zero single-use plastics, and direct local grower partnerships to restore raw flavor to the modern plate.
+              We celebrate authentic Kenyan home cooking, healthy lifestyle tips, and portion-conscious nutrition guidelines to cultivate physical wellness and cultural connection.
             </p>
             <div className="flex items-center space-x-2 text-[10px] font-mono text-[#C4A484] font-bold uppercase tracking-[0.15em]">
-              <span>ESTD 2026</span>
+              <span>ESTD 2014</span>
               <span>•</span>
-              <span>PACIFIC WOODLANDS</span>
+              <span>Nairobi, Kenya</span>
             </div>
           </div>
 
-          {/* Opening Times */}
+          {/* Quick Categories */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="font-mono text-[10px] font-bold text-[#FDFBF7]/50 uppercase tracking-[0.2em]">
-              LUNCH & DINNER HEARTH
+              BLOG CATEGORIES
             </h4>
             <div className="space-y-2 text-xs font-mono text-[#FDFBF7]/80 uppercase tracking-wider text-[11px]">
               <div className="flex justify-between border-b border-[#FDFBF7]/5 pb-1">
-                <span>Thursday - Sunday</span>
-                <span className="font-bold text-[#C4A484]">5:00 PM - 11:00 PM</span>
+                <span>Kenyan Cuisines</span>
               </div>
               <div className="flex justify-between border-b border-[#FDFBF7]/5 pb-1">
-                <span>Friday - Saturday</span>
-                <span className="font-bold text-[#C4A484]">11:00 AM - 3:00 PM</span>
+                <span>Weight Loss Meals</span>
+              </div>
+              <div className="flex justify-between border-b border-[#FDFBF7]/5 pb-1">
+                <span>Healthy Eating</span>
               </div>
               <div className="flex justify-between text-[#FDFBF7]/40 pt-1">
-                <span>Monday - Wednesday</span>
-                <span>Farms Foraging Closed</span>
+                <span>Breakfast, Lunch & Dinner</span>
               </div>
             </div>
           </div>
@@ -62,10 +62,10 @@ export default function Footer() {
           {/* Newsletter subscription */}
           <div className="md:col-span-5 space-y-4">
             <h4 className="font-mono text-[10px] font-bold text-[#FDFBF7]/50 uppercase tracking-[0.2em]">
-              RECEIVE SEASONAL HARVEST LOGS
+              RECEIVE FRESH RECIPES
             </h4>
             <p className="font-sans text-xs text-[#FDFBF7]/70 font-light">
-              Subscribe to get notified when new micro-seasonal botanical items or private foraging table tickets are released.
+              Subscribe to get notified whenever Chef Becca posts new traditional recipes, smart eating guidelines, or wellness articles.
             </p>
 
             <AnimatePresence mode="wait">
@@ -117,14 +117,14 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
             <span className="flex items-center text-[#C4A484]">
               <Heart className="w-3.5 h-3.5 mr-1 fill-[#C4A484]/20" />
-              <span>Sustaining organic soils worldwide</span>
+              <span>Nourishing souls through traditional flavors</span>
             </span>
             <a href="#" className="hover:text-[#FDFBF7] transition-colors flex items-center">
-              <span>Sourcing Terms</span>
+              <span>Privacy Policy</span>
               <ArrowUpRight className="w-3 h-3 ml-0.5" />
             </a>
             <a href="#" className="hover:text-[#FDFBF7] transition-colors flex items-center">
-              <span>Chef's Licensing</span>
+              <span>Disclaimer</span>
               <ArrowUpRight className="w-3 h-3 ml-0.5" />
             </a>
           </div>
